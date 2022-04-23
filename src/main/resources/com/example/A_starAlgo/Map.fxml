@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchor_P" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="947.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.A_starAlgo.SampleController">
+    <children>
+        <ImageView fx:id="map_Img" fitHeight="530.0" fitWidth="606.0" layoutX="-6.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@img/Map.jpg" />
+            </image>
+        </ImageView>
+        <Pane fx:id="paneR" layoutX="586.0" prefHeight="530.0" prefWidth="360.0">
+            <children>
+                <Label fx:id="titleLab" layoutX="72.0" layoutY="-13.0" prefHeight="98.0" prefWidth="219.0" text="Find Path Between Cities">
+                    <font>
+                        <Font name="Baskerville Old Face" size="20.0" />
+                    </font>
+                </Label>
+                <Label fx:id="sourceLab" layoutX="23.0" layoutY="68.0" prefHeight="34.0" prefWidth="66.0" text="Source ">
+                    <font>
+                        <Font name="Andalus" size="20.0" />
+                    </font>
+                </Label>
+                <Label fx:id="targetLab" layoutX="202.0" layoutY="60.0" prefHeight="50.0" prefWidth="66.0" text="Target">
+                    <font>
+                        <Font name="Andalus" size="20.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="CB_source" layoutX="19.0" layoutY="102.0" prefWidth="150.0" />
+                <ComboBox fx:id="CB_target" layoutX="193.0" layoutY="102.0" prefWidth="150.0" />
+                <Button fx:id="runButton" layoutX="268.0" layoutY="137.0" mnemonicParsing="false" onAction="#find" prefHeight="25.0" prefWidth="75.0" text="RUN" />
+                <Label fx:id="distanceLab" layoutX="19.0" layoutY="162.0" prefHeight="41.0" prefWidth="75.0" text="Distance">
+                    <font>
+                        <Font name="Andalus" size="20.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="DistanceTF" layoutX="102.0" layoutY="195.0" prefHeight="41.0" prefWidth="200.0" />
+                <Label fx:id="pathLab" layoutX="19.0" layoutY="229.0" prefHeight="36.0" prefWidth="66.0" text="Path">
+                    <font>
+                        <Font name="Andalus" size="22.0" />
+                    </font>
+                </Label>
+            <Label layoutX="15.0" layoutY="365.0" prefHeight="34.0" prefWidth="158.0" text="Time Complexeties">
+               <font>
+                  <Font name="Andalus" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="11.0" layoutY="440.0" prefHeight="34.0" prefWidth="167.0" text="Space Complexeties">
+               <font>
+                  <Font name="Andalus" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="TimeTF" layoutX="102.0" layoutY="399.0" prefHeight="41.0" prefWidth="200.0" />
+            <TextField fx:id="SpaceTF" layoutX="102.0" layoutY="474.0" prefHeight="41.0" prefWidth="200.0" />
+            <TextArea fx:id="pathTF" layoutX="102.0" layoutY="252.0" prefHeight="113.0" prefWidth="200.0" />
+            </children>
+        </Pane>
+      <Circle fill="#ee0707" layoutX="364.0" layoutY="97.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff221f" layoutX="334.0" layoutY="112.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff221f" layoutX="313.0" layoutY="135.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff1f1f" layoutX="276.0" layoutY="183.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff1f1f" layoutX="272.0" layoutY="201.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff1f1f" layoutX="276.0" layoutY="240.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff221f" layoutX="272.0" layoutY="284.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff2b1f" layoutX="338.0" layoutY="223.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff1f1f" layoutX="334.0" layoutY="164.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff1f1f" layoutX="321.0" layoutY="265.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff1f1f" layoutX="338.0" layoutY="288.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff1f1f" layoutX="360.0" layoutY="296.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff281f" layoutX="321.0" layoutY="292.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff221f" layoutX="330.0" layoutY="311.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff1f1f" layoutX="257.0" layoutY="261.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff1f1f" layoutX="261.0" layoutY="248.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff2b1f" layoutX="290.0" layoutY="322.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff1f1f" layoutX="318.0" layoutY="325.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff1f1f" layoutX="209.0" layoutY="363.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff1f1f" layoutX="186.0" layoutY="392.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff1f1f" layoutX="272.0" layoutY="384.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff1f1f" layoutX="301.0" layoutY="359.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff1f1f" layoutX="333.0" layoutY="148.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff1f1f" layoutX="307.0" layoutY="170.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff1f1f" layoutX="362.0" layoutY="180.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff1f1f" layoutX="335.0" layoutY="190.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff1f1f" layoutX="336.0" layoutY="201.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff1f1f" layoutX="349.0" layoutY="201.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff1f1f" layoutX="298.0" layoutY="215.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff1f1f" layoutX="266.0" layoutY="220.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff1f1f" layoutX="297.0" layoutY="228.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff1f1f" layoutX="297.0" layoutY="254.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff281f" layoutX="278.0" layoutY="274.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff221f" layoutX="238.0" layoutY="303.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff1f1f" layoutX="260.0" layoutY="318.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff221f" layoutX="232.0" layoutY="330.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff1f1f" layoutX="246.0" layoutY="347.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff1f1f" layoutX="303.0" layoutY="343.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff1f1f" layoutX="277.0" layoutY="364.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff1f1f" layoutX="299.0" layoutY="377.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff1f1f" layoutX="197.0" layoutY="374.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff1f1f" layoutX="189.0" layoutY="414.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff1f1f" layoutX="250.0" layoutY="390.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff1f1f" layoutX="259.0" layoutY="409.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff1f1f" layoutX="368.0" layoutY="130.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff1f1f" layoutX="262.0" layoutY="490.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff221f" layoutX="294.0" layoutY="130.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff1f1f" layoutX="305.0" layoutY="108.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff1f1f" layoutX="309.0" layoutY="76.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+    </children>
+</AnchorPane>
